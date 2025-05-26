@@ -1,0 +1,279 @@
+
+<html>
+<title>Login Form</title>
+<head>
+</head>
+<body>
+    <h1> Login Form</h1>
+<form id="login"name="form" onsubmit= "event.preventDefault(); validpass();">
+    <label>Username:</label>
+    <input type="text" id="username" name="username">
+    <div id="usernameError" class="error"></div><br><br>
+    <label>Gmail:</label>
+    <input type="email" id="Gmail" name="Gmail">
+    <div id="GmailError" class="error"></div><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" name="password">
+    <div id="passwordError" class="error"></div><br><br>
+    <label>Reenter Password:</label>
+    <input type="password" id="password1" name="password1">
+    <div id="reenterPasswordError" class="error"></div><br><br>
+    <button class="button" type="submit" id="loginButton">Login</button><br><br>
+    <a href="#" id="forgotPassword" style="text-decoration: none; color: #007bff;">
+        Forgot Password?
+    </a>
+    <a href="sign up 2/sign.html" id="signup" style="text-decoration: none; color: #007bff;">
+        Sign Up
+    </a>
+
+    <div class="social-icons">
+        <a href="http://www.instragram.com" title="Instagram">
+          <img src="icons8-instagram-48 (1).png" alt="Instagram">
+        </a>
+        <a href="http://www.youtube.com" title="YouTube">
+          <img src="icons8-youtube-48.png" alt="YouTube">
+        </a>
+        <a href="http://www.facebook.com" title="facebook">
+          <img src="icons8-facebook-48.png" alt="Facebook">
+        </a>
+      </div>
+    
+</form>
+
+<script type="text/javascript">
+function adddata() {
+    var username = document.getElementById("username").value;
+    var gmail = document.getElementById("Gmail").value;
+    var password = document.getElementById("password").value;
+    var Reenter = document.getElementById("password1").value;
+
+    var tr = document.createElement("tr");
+
+    var td1 = tr.appendChild(document.createElement("td"));
+    var td2 = tr.appendChild(document.createElement("td"));
+    var td3 = tr.appendChild(document.createElement("td"));
+    var td4 = tr.appendChild(document.createElement("td"));
+
+    td1.innerHTML = username;
+    td2.innerHTML = gmail;
+    td3.innerHTML = password;
+    td4.innerHTML = Reenter;
+
+    document.getElementById("td1").querySelector("tbody").appendChild(tr);
+
+    document.getElementById("login").reset();
+}
+
+function validateForm() {
+    let valid = true;
+
+    // Name validation
+    const username = document.getElementById("username").value;
+    const usernameError = document.getElementById("usernameError");
+    const nameRegex = /^[A-Za-z]+$/;
+    if (!nameRegex.test(username)) {
+        usernameError.innerText = "Name must contain only alphabets.";
+        usernameError.style.display = "block";
+        valid = false;
+    } else {
+        usernameError.innerText = "";
+        usernameError.style.display = "none";
+    }
+
+    // Gmail validation
+    const gmail = document.getElementById("Gmail").value;
+    const gmailError = document.getElementById("GmailError");
+    const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (gmail === "") {
+        gmailError.innerText = "Gmail field cannot be empty.";
+        gmailError.style.display = "block";
+        valid = false;
+    } else if (!gmailRegex.test(gmail)) {
+        gmailError.innerText = "Please enter a valid Gmail address ending with @gmail.com.";
+        gmailError.style.display = "block";
+        valid = false;
+    } else {
+        gmailError.innerText = "";
+        gmailError.style.display = "none";
+    }
+
+    // Password validation
+    const password = document.getElementById("password").value;
+    const passwordError = document.getElementById("passwordError");
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=])[A-Za-z\d@#$%^&+=]{8,}$/;
+    if (!passwordRegex.test(password)) {
+        passwordError.innerText = "Password must be at least 8 characters long and contain an uppercase letter, a lowercase letter, a number, and a special character.";
+        passwordError.style.display = "block";
+        valid = false;
+    } else {
+        passwordError.innerText = "";
+        passwordError.style.display = "none";
+    }
+
+    // Re-enter password validation
+    const reenterPassword = document.getElementById("password1").value;
+    const reenterPasswordError = document.getElementById("reenterPasswordError");
+    if (password !== reenterPassword) {
+        reenterPasswordError.innerText = "Passwords do not match.";
+        reenterPasswordError.style.display = "block";
+        valid = false;
+    } else {
+        reenterPasswordError.innerText = "";
+        reenterPasswordError.style.display = "none";
+    }
+
+    return valid;
+}
+
+function validpass() {
+    if (validateForm()) {
+
+        alert("Submitted successfully");
+        window.location.href="index.html";
+        
+    }
+}
+
+</script>
+
+<style>
+
+
+h1{
+    margin-top: 20px;
+    
+}
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    
+    form {
+        background: white;
+        padding: 20px 30px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+
+
+    label {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        input.error-border {
+            border-color: red;
+        }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+ 
+    button {
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-inline-start: 150px;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+a#forgotPassword {
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+a#forgotPassword:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+a#signup{
+font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+a#signup{
+text-decoration: underline;
+    color: #0056b3;
+    }
+
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  padding-left: 135px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        form {
+            padding: 15px;
+        }
+
+        table {
+            width: 100%;
+        }
+    }
+</style>
+</body>
+</html>
+

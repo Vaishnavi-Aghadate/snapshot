@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Contact Us Form</title>
+  
+  <link rel="stylesheet" href="ContactUsStyle.css">
+</head>
+<body>
+  <div class="con">
+    <nav class="navbar">
+     
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li ><a href="aboutus.html">About</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="MainIndoor.html">Indoor</a></li>
+        <li><a href="outdoor.html">Outdoor</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header>
+    <h1>Get In Touch </h1>
+  <br>
+  </header>
+  
+  <main class="main-container">
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+      
+      <label for="event">Type of Event</label>
+      <select id="event" name="event" required>
+        <option value="" disabled selected>Select Event Type</option>
+        <option value="wedding">Wedding</option>
+        <option value="birthday">Birthday</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="portrait">BabyShower</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <label for="style">Preferred Photography Style</label>
+      <select id="style" name="style">
+        <option value="" disabled selected>Select Photography Style</option>
+        <option value="traditional">Traditional</option>
+        <option value="candid">Candid</option>
+        <option value="documentary">Documentary</option>
+        <option value="artistic">Artistic</option>
+      </select>
+      
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="date" required>
+      
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" rows="4"placeholder="Add your message here"></textarea>
+     
+      
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <br>
+  <footer>
+
+    <div class="copyright">
+      &copy; 2024 Snapshot | Wedding photographers in Pune & Mumbai
+    </div>
+    </footer>
+</body>
+</html>

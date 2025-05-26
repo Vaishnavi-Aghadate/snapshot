@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <section id="registration-form">
+        <h2>Book Your Photoshoot</h2>
+        <form action="submit_booking.php" method="post">
+            <!-- Name Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone Number Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Shoot Type Dropdown -->
+            <label for="shoot-type">Choose a Shoot Type:</label>
+            <select id="shoot-type" name="shoot_type" required>
+                <option value="wedding">Wedding</option>
+                <option value="pre-wedding">Pre-Wedding</option>
+                <option value="baby-shower">Baby Shower</option>
+                <option value="indoor-outdoor">Indoor/Outdoor</option>
+            </select>
+
+            <!-- Date Picker -->
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Submit Button -->
+           <a href="Thankyou.jpg" <button type="submit" class="submit-btn">Submit Booking</button></a>
+        </form>
+    </section>
+</body>
+</html>

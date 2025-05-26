@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background: url('ContactUs/pexels-taryn-elliott-4340785.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin-left: 950px;
+  }
+  
+  .navbar ul li {
+    margin: 0 8px;
+  }
+  
+  .navbar ul li a {
+    font-size: 18px;
+    color: purple;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: 0.3s;
+    font-family: sans-serif;
+  }
+  
+  .navbar ul li a:hover {
+    transition: ease-in-out;
+    /* background: white; */
+    color: black;
+    border-radius: 4px;
+  }
+
+
+
+  /* Header Styling */
+  header h1 {
+    text-align: left;
+    padding-left: 300px;
+    padding-bottom: 40px;
+    font-size: 3rem;
+    color: purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px 0;
+  }
+  
+  /* Form Layout */
+  .main-container {
+    display: flex;
+    justify-content: flex-end; /* Align form to the right */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 50%; /* Occupies half the screen on larger devices */
+    max-width: 400px; /* Restrict maximum width */
+    padding-right: 300px; /* Add padding on the right side */
+  }
+  
+  /* Input Fields Styling */
+  .contact-form label {
+    display: none; /* Hide labels */
+  }
+  
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff; /* Underline style */
+    background: transparent;
+    color: gray; /* Black text for better readability */
+    font-size: 1em;
+    outline: none;
+  }
+  
+  /*.contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    border-bottom-color: #333; /* Highlight active field */
+  */
+  
+  .contact-form textarea {
+    resize: none;
+  }
+  
+  .contact-form button {
+    background: purple;
+    color: white;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 30%; /* Button spans full width */
+    align-items: center;
+  }
+  
+  .contact-form button:hover {
+    background: rgb(12, 11, 11);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: #fff;
+    padding: 0px 0px;
+    display: flex;
+    
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+    padding-left: 600px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      justify-content: center; /* Center align for smaller screens */
+    }
+  
+    .contact-form {
+      width: 90%; /* Reduce form width on smaller screens */
+      padding: 0;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-form button {
+      font-size: 1em;
+      padding: 5px;
+     
+    }
+  }
+  

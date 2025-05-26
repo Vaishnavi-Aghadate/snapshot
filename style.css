@@ -1,0 +1,582 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; 
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden; 
+}
+
+.upward-logo {
+  position: fixed;
+  width: 90px; /* Adjust as per your logo size */
+  height: auto;
+  z-index: 2; /* Ensure logos are above the video */
+
+}
+.upward-logo {
+  bottom: 10px; /* Adjust spacing from the top */
+  right: 50px; /* Adjust spacing from the right */
+  width: 90px;
+}
+.upward-logo img {
+    width: 92%; /* Make logo responsive */
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 20px;
+ 
+}
+
+
+.navbar .logo {
+  width: 160px;
+  height: auto;
+  justify-content: left;
+  margin-right: 800px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 8px;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  color: purple;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  transition: ease-in-out;
+  /* background: white; */
+  color: black;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.intro {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  
+}
+
+.background-video {
+  position: absolute; /* Keeps the video fixed in the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video scales proportionally and covers the area */
+  z-index: -1; /* Places the video behind other content */
+  object-position: center center; 
+}
+
+
+
+.content-overlay {
+  margin-top: -5rem;
+  width: 100%;
+  position: absolute; /* Allows precise positioning relative to the section */
+  top: 100px; /* Adjust as needed to position below the logo */
+  left: 20px; /* Align text to the left */
+  z-index: 1; /* Ensure it's above the video */
+  text-align: left;
+
+}
+
+.content-overlay h1 {
+  font-size: 52px; /* Adjust size for better visibility */
+  color: purple;
+  font-family: math;
+  margin: 50px 60px; /* Add spacing between h1 and p */
+  margin-top: 6rem;
+}
+
+.content-overlay p {
+  font-size: 1.3em;
+  color: black;
+  margin: -50px 92px;
+}
+
+/* Cards Section */
+.cards {
+  padding: 135px 20px;
+  background-color: rgba(255, 248, 248, 0.9); /* Match hero section with dark background */
+  color: white;
+  text-align: center;
+  padding-bottom: 170px;
+}
+
+.cards h1 {
+  font-size: 2.5em;
+  color:purple; /* A vibrant color for the title */
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cards p {
+  font-size: 1.2em;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 313px;
+  height: 427px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Card Overlay */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  padding: 8px 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay h3 {
+  color: #f39c12; /* Vibrant color for overlay text */
+  font-size: 1.5em;
+  margin: 0;
+}
+
+
+
+/* Section heading */
+.packages-section {
+    
+    padding: 110px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section-heading {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: purple;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/* Packages container (flex layout) */
+.packages-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.package-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px;
+    width: 333px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.package-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #020305;
+}
+
+.package-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #080808;
+}
+
+
+.package-details {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.package-details li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.package-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e42712;
+    margin-bottom: 20px;
+}
+
+
+.book-now-button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 12px 18px;
+    background-color:purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.1s ease;
+    opacity: 0.6;
+}
+
+.book-now-button:hover {
+    background-color: #000000;
+}
+
+
+@media (max-width: 768px) {
+    .packages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card {
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Section Styling */
+#indoor-outdoor {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+#indoor-outdoor a
+{
+  color: white;
+  text-decoration: none;
+}
+
+.half-section {
+  flex: 1; /* Equal 50-50 split */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.3s ease, transform 0.2s ease;
+}
+
+/* Background Images */
+.indoor {
+  background-image: url('Indoor/4.jpg.jpg'); /* Replace with your indoor image */
+  background-size: cover;
+  background-position: center;
+}
+
+.outdoor {
+  background-image: url('outdoor.jpg'); /* Replace with your outdoor image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay Effect */
+.half-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Text and Buttons Styling */
+.half-section h2 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.half-section .buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  flex-direction: column; /* Stack buttons vertically for animation clarity */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Positioned above */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+ 
+}
+
+.half-section:hover .buttons {
+  opacity: 1; /* Show buttons */
+  transform: translateY(0); /* Slide into place */
+}
+
+/* Button Styling */
+.half-section button {
+  background-color: rgb(0, 0, 0);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.half-section button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Cancel Zoom Effect */
+.half-section:hover {
+  flex: 1; /* Keep section size static */
+  transform: none; /* Remove zoom effect */
+  color: purple;
+}
+
+.half-section:hover::before {
+  background: rgba(136, 136, 136, 0.6); /* Darker overlay on hover */
+}
+
+
+
+/* Gallery Section *//* Modern Gallery Section */
+.modern-gallery {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.modern-gallery h1 {
+  font-size: 2.5em;
+  color: purple;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.modern-gallery p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ddd; /* Fallback if images are missing */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Custom Layout Adjustments */
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .modern-gallery h1 {
+    font-size: 2em;
+  }
+
+  .modern-gallery p {
+    font-size: 1em;
+  }
+
+  .gallery-item.wide,
+  .gallery-item.tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-gallery h1 {
+    font-size: 1.8em;
+  }
+
+  .modern-gallery p {
+    font-size: 0.9em;
+  }
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #fff;
+  padding: 70px 44px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.navigation,
+.contact,
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation h3,
+.contact h3,
+.social-media h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navigation a,
+.contact a,
+.contact p {
+  text-decoration: none;
+  color: #000;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.contact-info img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+
