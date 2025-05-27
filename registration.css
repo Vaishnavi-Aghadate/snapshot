@@ -6,28 +6,30 @@
 
 /* Body and Main Container Styling */
 body {
-    font-family: Arial, sans-serif;
+        font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background-color: #f0f2f5;
     background-image: url(photo.image.jpg);
-    
-    background-size: 115%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px; /* Add padding for mobile */
     
 }
 
 /* Centering the Form */
 #registration-form {
-    width: 100%;
+   width: 100%;
     max-width: 400px;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-left: -80px;
+    /* Remove the margin-left */
 }
 
 /* Form Title */
@@ -52,7 +54,7 @@ body {
 #registration-form input,
 #registration-form select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -78,8 +80,29 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     text-decoration: none;
+     display: block; /* Ensure it's a block element */
 }
 
 .submit-btn:hover {
     background-color: #000000;
+}
+
+form a {
+    display: block;
+    text-decoration: none;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+    #registration-form {
+        padding: 15px;
+    }
+    
+    #registration-form h2 {
+        font-size: 20px;
+    }
+    
+    body {
+        background-size: auto; /* Better for mobile */
+    }
 }
