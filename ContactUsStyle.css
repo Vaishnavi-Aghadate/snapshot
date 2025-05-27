@@ -157,3 +157,117 @@ body {
     }
   }
   
+  /* ===== ADD THESE NEW STYLES BELOW YOUR EXISTING CODE ===== */
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 24px;
+  color: purple;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .navbar ul {
+    margin-left: 700px;
+  }
+  
+  .contact-form {
+    padding-right: 200px;
+  }
+  
+  .copyright {
+    padding-left: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar ul {
+    margin-left: 500px;
+  }
+  
+  header h1 {
+    padding-left: 200px;
+  }
+  
+  .contact-form {
+    padding-right: 150px;
+  }
+  
+  .copyright {
+    padding-left: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Show mobile menu button */
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  /* Hide desktop menu by default */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+    margin-left: 0;
+  }
+  
+  /* Show mobile menu when active */
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .navbar ul li {
+    margin: 15px 0;
+  }
+  
+  header h1 {
+    padding-left: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+  
+  .contact-form {
+    width: 80%;
+    padding-right: 0;
+  }
+  
+  .copyright {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+    margin-top: 70px;
+  }
+  
+  .contact-form {
+    width: 90%;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+  }
+}

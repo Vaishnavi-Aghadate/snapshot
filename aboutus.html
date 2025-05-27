@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="aboutus.css">
 </head>
 <body>
@@ -13,65 +14,97 @@
       <div class="overlay">
         <div class="con">
           <nav class="navbar">
-           
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="ContactUs.html">Contact</a></li>
-              <li><a href="Indoor 2/Indoor.html">Indoor</a></li>
-              <li><a href="outdoor.html">Outdoor</a></li>
-            </ul>
-          </nav>
-        </div>
-        <h1>About Us</h1>
-        <p>
-            <b>Where Moments Become Memories</b>
-        </p>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Snapshot</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="Indoor 2/Indoor.html">Indoor</a></li>
+        <li><a href="outdoor.html">Outdoor</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
+  </nav>
 
-    <div class="content-section">
-      <div class="content">
-        <div class="column">
-          <h2>Who We Are</h2>
-          <p>
-            At <strong>Snapshot</strong>, we specialize in capturing life's most precious moments with creativity and passion. 
-            From candid portraits to breathtaking event photography, our mission is to transform your moments into timeless treasures.
-          </p>
-          <p>
-            Whether it's a wedding, portrait, corporate shoot, or special event, we believe every moment tells a 
-            unique story, and we’re here to help you preserve it forever.
-          </p>
-        </div>
-        <div class="column">
-          <h2>Why Choose Us</h2>
-          <p>
-            Personalized services tailored to your vision.
-            State-of-the-art equipment for exceptional image quality.
-            Our mission is to not only meet your expectations but to exceed them with every shot we take.
-
-          </p>
-          <p>
-            A relaxed and friendly environment for your comfort.
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <h2>Our Philosophy</h2>
-        <p>
-            We believe that every photograph tells a story. <br>Our approach combines technical expertise with an artistic touch, 
-            ensuring every shot reflects the emotion, energy, and <br>essence of the momen
-        </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p><b>Where Moments Become Memories</b></p>
     </div>
   </section>
-<br><br>
- 
 
+  <!-- Content Section -->
+  <section class="content-section">
+    <div class="content">
+      <div class="column">
+        <h2>Who We Are</h2>
+        <p>
+          At <strong>Snapshot</strong>, we specialize in capturing life's most precious moments with creativity and passion. 
+          From candid portraits to breathtaking event photography, our mission is to transform your moments into timeless treasures.
+        </p>
+        <p>
+          Whether it's a wedding, portrait, corporate shoot, or special event, we believe every moment tells a 
+          unique story, and we're here to help you preserve it forever.
+        </p>
+      </div>
+      <div class="column">
+        <h2>Why Choose Us</h2>
+        <p>
+          Personalized services tailored to your vision.
+          State-of-the-art equipment for exceptional image quality.
+          Our mission is to not only meet your expectations but to exceed them with every shot we take.
+        </p>
+        <p>
+          A relaxed and friendly environment for your comfort.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <h2>Our Philosophy</h2>
+      <p>
+        We believe that every photograph tells a story. Our approach combines technical expertise with an artistic touch, 
+        ensuring every shot reflects the emotion, energy, and essence of the moment.
+      </p>
+    </div>
+  </section>
 
-  <div class="copyright">
-    &copy; 2024 Snapshot | Wedding photographers in Pune & Mumbai
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <div class="copyright">
+      &copy; 2024 Snapshot | Wedding photographers in Pune & Mumbai
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
 
